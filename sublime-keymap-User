@@ -1,0 +1,5 @@
+[
+		{ "keys": ["f12"], "command": "open_in_browser" },
+		{ "keys": ["ctrl+q"], "command": "reindent" },
+		{ "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} }
+]

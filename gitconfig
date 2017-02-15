@@ -1,0 +1,10 @@
+[user]
+	email = juncaixinchi111@gmail.com
+	name = juncaixinchi
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	last = log -1 HEAD
+	cmu = commit -a -m \"update\"
+	logbr = log --oneline --decorate --graph --all -20
