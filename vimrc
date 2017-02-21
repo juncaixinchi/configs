@@ -54,5 +54,5 @@ endif
 
 set number
 set background=dark
-set tabstop=4
+set tabstop=2
 set shiftwidth=4
