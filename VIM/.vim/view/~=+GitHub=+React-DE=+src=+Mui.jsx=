@@ -40,7 +40,7 @@ setlocal foldcolumn=0
 setlocal foldenable
 setlocal foldexpr=0
 setlocal foldignore=#
-setlocal foldlevel=0
+setlocal foldlevel=99
 setlocal foldmarker={{{,}}}
 setlocal foldmethod=indent
 setlocal foldminlines=1
@@ -82,7 +82,7 @@ setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal shiftwidth=2
 setlocal noshortname
-setlocal nosmartindent
+setlocal smartindent
 setlocal softtabstop=0
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
@@ -106,19 +106,21 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-142
+9
 normal! zo
-264
+10
 normal! zo
-265
+15
 normal! zo
-273
+28
 normal! zo
-let s:l = 271 - ((128 * winheight(0) + 19) / 38)
+29
+normal! zo
+let s:l = 2 - ((1 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-271
+2
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

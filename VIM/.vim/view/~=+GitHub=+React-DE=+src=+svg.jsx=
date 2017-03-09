@@ -15,8 +15,8 @@ setlocal cinkeys=0{,0},0),:,!^F,o,O,e,0]
 setlocal cinoptions=j1,J1
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=//%s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -122,11 +122,11 @@ normal! zo
 normal! zo
 60
 normal! zo
-let s:l = 3 - ((2 * winheight(0) + 19) / 38)
+let s:l = 2 - ((1 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
+2
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
