@@ -1,10 +1,12 @@
 [user]
-	email = juncaixinchi111@gmail.com
-	name = juncaixinchi
+	name = lixinwei
+	email = xinwei.li@winsuntech.cn
 [alias]
 	st = status
 	co = checkout
 	br = branch
 	last = log -1 HEAD
-	cmu = commit -a -m \"update\"
+	cm = commit -a
 	logbr = log --oneline --decorate --graph --all -20
+[core]
+	editor = vi
