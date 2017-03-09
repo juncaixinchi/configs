@@ -1,12 +1,23 @@
 # configs
 主要是一些软件的配置文件
 
+bash
+
++ bashrc
+
+vim
+
++ VIM/
+
 Git
 
-    gitconfig
++ gitconfig
+
+eslint 
+
++ eslintrc
 
 sublime txt 3
     
-    sublime-keymap-User
-    sublime-packages
-
++ sublime-keymap-User
++ sublime-packages
