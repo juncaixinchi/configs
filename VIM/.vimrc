@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                   " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required
 " use the command below to install the plugins from the command line
@@ -12,6 +12,7 @@ call vundle#rc()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
@@ -20,14 +21,17 @@ filetype plugin indent on    " required
 
 syntax on
 
-" jsx
+" vim-jsx
 let g:jsx_ext_required = 0
 
 " syntastic
+" see more by ':help syntastic'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_check_on_w = 0
 
+
 " fold
+" set foldmethod=syntax
 set foldmethod=indent
 set foldlevelstart=99
 " set foldlevel=0
@@ -45,4 +49,7 @@ set expandtab
 set smartindent
 set number
 
-
+" colors
+set t_Co=256
+" colorscheme evening
+" set background=light

@@ -10,9 +10,9 @@ setlocal breakindentopt=
 setlocal bufhidden=
 setlocal buflisted
 setlocal buftype=
-setlocal cindent
-setlocal cinkeys=0{,0},0),:,!^F,o,O,e,0]
-setlocal cinoptions=j1,J1
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
 setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
@@ -32,32 +32,32 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'javascript'
-setlocal filetype=javascript
+if &filetype != 'javascript.jsx'
+setlocal filetype=javascript.jsx
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
 setlocal foldenable
 setlocal foldexpr=0
 setlocal foldignore=#
-setlocal foldlevel=99
+setlocal foldlevel=0
 setlocal foldmarker={{{,}}}
 setlocal foldmethod=indent
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
+setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=0
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal indentexpr=GetJsxIndent()
+setlocal indentkeys=0{,0},0),0],0,,!^F,o,O,e,*<Return>,<>>,<<>,/
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
+setlocal iskeyword=@,48-57,_,192-255,$
 setlocal keywordprg=
 setlocal nolinebreak
 setlocal nolisp
@@ -82,18 +82,18 @@ setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal shiftwidth=2
 setlocal noshortname
-setlocal smartindent
+setlocal nosmartindent
 setlocal softtabstop=0
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
 setlocal statusline=
-setlocal suffixesadd=
+setlocal suffixesadd=.js,.jsx
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'javascript'
-setlocal syntax=javascript
+if &syntax != 'javascript.jsx'
+setlocal syntax=javascript.jsx
 endif
 setlocal tabstop=2
 setlocal tagcase=
@@ -106,24 +106,64 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-25
+7
 normal! zo
-35
+37
 normal! zo
-60
+43
 normal! zo
-76
+66
 normal! zo
-82
+67
 normal! zo
-83
+92
 normal! zo
-let s:l = 1 - ((0 * winheight(0) + 19) / 38)
+93
+normal! zo
+95
+normal! zo
+107
+normal! zo
+117
+normal! zo
+118
+normal! zo
+119
+normal! zo
+120
+normal! zo
+219
+normal! zo
+221
+normal! zo
+222
+normal! zo
+229
+normal! zo
+229
+normal! zc
+419
+normal! zo
+428
+normal! zo
+429
+normal! zo
+438
+normal! zo
+439
+normal! zo
+440
+normal! zo
+443
+normal! zo
+444
+normal! zo
+let s:l = 428 - ((204 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+428
+normal! 07|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

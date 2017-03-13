@@ -10,9 +10,9 @@ setlocal breakindentopt=
 setlocal bufhidden=
 setlocal buflisted
 setlocal buftype=
-setlocal cindent
-setlocal cinkeys=0{,0},0),:,!^F,o,O,e,0]
-setlocal cinoptions=j1,J1
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
 setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
@@ -32,32 +32,32 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'javascript'
-setlocal filetype=javascript
+if &filetype != 'javascript.jsx'
+setlocal filetype=javascript.jsx
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
 setlocal foldenable
 setlocal foldexpr=0
 setlocal foldignore=#
-setlocal foldlevel=0
+setlocal foldlevel=99
 setlocal foldmarker={{{,}}}
 setlocal foldmethod=indent
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
+setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=0
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal indentexpr=GetJsxIndent()
+setlocal indentkeys=0{,0},0),0],0,,!^F,o,O,e,*<Return>,<>>,<<>,/
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
+setlocal iskeyword=@,48-57,_,192-255,$
 setlocal keywordprg=
 setlocal nolinebreak
 setlocal nolisp
@@ -89,11 +89,11 @@ setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
 setlocal statusline=
-setlocal suffixesadd=
+setlocal suffixesadd=.js,.jsx
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'javascript'
-setlocal syntax=javascript
+if &syntax != 'javascript.jsx'
+setlocal syntax=javascript.jsx
 endif
 setlocal tabstop=2
 setlocal tagcase=
@@ -106,165 +106,11 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-13
-normal! zo
-40
-normal! zo
-46
-normal! zo
-51
-normal! zo
-52
-normal! zo
-53
-normal! zo
-64
-normal! zo
-65
-normal! zo
-247
-normal! zo
-248
-normal! zo
-352
-normal! zo
-353
-normal! zo
-362
-normal! zo
-374
-normal! zo
-380
-normal! zo
-385
-normal! zo
-461
-normal! zo
-462
-normal! zo
-463
-normal! zo
-464
-normal! zo
-465
-normal! zo
-504
-normal! zo
-505
-normal! zo
-521
-normal! zo
-522
-normal! zo
-580
-normal! zo
-583
-normal! zo
-589
-normal! zo
-593
-normal! zo
-598
-normal! zo
-599
-normal! zo
-600
-normal! zo
-761
-normal! zo
-768
-normal! zo
-770
-normal! zo
-783
-normal! zo
-796
-normal! zo
-798
-normal! zo
-799
-normal! zo
-800
-normal! zo
-808
-normal! zo
-811
-normal! zo
-812
-normal! zo
-1192
-normal! zo
-1245
-normal! zo
-1281
-normal! zo
-1282
-normal! zo
-1427
-normal! zo
-1438
-normal! zo
-1439
-normal! zo
-1443
-normal! zo
-1444
-normal! zo
-1448
-normal! zo
-1495
-normal! zo
-1522
-normal! zo
-1523
-normal! zo
-1624
-normal! zo
-1626
-normal! zo
-1627
-normal! zo
-1641
-normal! zo
-1763
-normal! zo
-1776
-normal! zo
-1781
-normal! zo
-1863
-normal! zo
-1864
-normal! zo
-1884
-normal! zo
-1888
-normal! zo
-1889
-normal! zo
-1884
-normal! zc
-1895
-normal! zo
-1896
-normal! zo
-1897
-normal! zo
-1898
-normal! zo
-1895
-normal! zc
-1933
-normal! zo
-1949
-normal! zo
-1951
-normal! zo
-let s:l = 19 - ((18 * winheight(0) + 19) / 38)
+let s:l = 24 - ((23 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-19
+24
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
