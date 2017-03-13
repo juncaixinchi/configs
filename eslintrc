@@ -22,6 +22,7 @@
     "no-undef": "warn",
     "max-len": "warn",
     "no-unused-vars": "warn",
+    "no-unused-expressions": "warn",
     "no-shadow": "warn",
     "default-case": "warn",
     "no-confusing-arrow": "warn",
@@ -34,7 +35,7 @@
     "import/no-extraneous-dependencies": "warn",
     "import/extensions": ["warn", "never"],
     "react/no-multi-comp": "warn",
-    "react/prop-types": "warn",
+    "react/prop-types": "off",
     "react/prefer-stateless-function": ["warn", { "ignorePureComponents": true }]
     }
 }
