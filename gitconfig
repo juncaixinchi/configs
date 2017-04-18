@@ -8,5 +8,6 @@
 	last = log -1 HEAD
 	cm = commit -a
 	logbr = log --oneline --decorate --graph --all -20
+	logbra = log --oneline --decorate --graph --all
 [core]
 	editor = vi
