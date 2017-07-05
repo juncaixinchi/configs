@@ -29,6 +29,23 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 ```
 
+### manual install plugins
+
+```bash
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/
+git clone https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/
+git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/
+git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/
+git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/
+
+sudo apt-get install build-essential cmake
+sudo apt-get install python-dev python3-dev
+
+cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+./install.py --tern-completer
+```
+
 ## Git
 
 + gitconfig
