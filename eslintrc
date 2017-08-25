@@ -36,6 +36,9 @@
     "import/extensions": ["warn", "never"],
     "react/no-multi-comp": "warn",
     "react/prop-types": "off",
-    "react/prefer-stateless-function": ["warn", { "ignorePureComponents": true }]
-    }
+    "react/prefer-stateless-function": ["warn", { "ignorePureComponents": true }],
+    "class-methods-use-this": "off",
+    "no-console": "off",
+    "no-param-reassign": ["error", { "props": false }]
+  }
 }

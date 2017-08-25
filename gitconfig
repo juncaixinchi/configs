@@ -1,15 +1,9 @@
 [user]
-	name = lixinwei
-	email = xinwei.li@winsuntech.cn
+	name = juncaixinchi
+	email = juncaixinchi111@gmail.com
 [alias]
 	st = status
-	co = checkout
-	br = branch
-	last = log -1 HEAD
-	cm = commit -a
-	logbr = log --oneline --decorate --graph --all -20
-	logbra = log --oneline --decorate --graph --all
+  logl = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(bold yellow)%d%C(reset) %s%C(reset) %C(dim white) - %an%C(reset)' -18
+  logla = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(bold yellow)%d%C(reset) %s%C(reset) %C(dim white) - %an%C(reset)' --all
 [core]
 	editor = vi
-[push]
-	default = matching
