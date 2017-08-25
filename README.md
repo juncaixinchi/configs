@@ -11,6 +11,7 @@
 
 sudo apt-get install vim
 sudo apt-get install npm
+sudo apt-get install python-dev
 
 ### Need install eslint
 
