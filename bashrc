@@ -95,6 +95,7 @@ alias l='ls -CF'
 # other alias
 
 alias es='eslint --fix'
+alias si='du -d 1 -h'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -124,3 +125,11 @@ parse_git_branch() {
 }
 export PS1="\[\033[01;32m\]\u@\h \[\033[01;94m\]\w\[\033[93m\]\$(parse_git_branch)\[\033[00m\] \n$ "
 PROMPT_COMMAND='echo -en "\033]0; $(whoami)@$(hostname)|$( pwd|cut -d "/" -f 4-100 ) \a"'
+
+
+## auto ssh-add Private key
+# if [ -z "$SSH_AUTH_SOCK" ] ; then
+#   eval `ssh-agent -s`
+#   ssh-add
+#   ssh-add ~/.ssh/WisnucCDCI
+# fi
