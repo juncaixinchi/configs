@@ -46,6 +46,10 @@ set foldlevelstart=99
 " set foldlevel=0
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
+" expend inline style object in JSX
+nnoremap <F2> mn:s/\([,\{v]\)[ ]/\1\r/g<CR>
+nnoremap <F3> :s/ \(}}\) */\r\1\r/g<CR>
+nmap <F9> <F2><F3>`n20==
 
 " auto mkview & loadview
 au BufWinLeave * silent mkview
