@@ -17,6 +17,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'iamcco/markdown-preview.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -47,13 +48,14 @@ set foldlevelstart=99
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
 " expend inline style object in JSX
-nnoremap <F2> mn:s/\([,\{v]\)[ ]/\1\r/g<CR>
-nnoremap <F3> :s/ \(}}\) */\r\1\r/g<CR>
-nmap <F9> <F2><F3>`n20==
+nnoremap <F9> mn:s/\([,\{rv]\)[ ]/\1\r/g<CR>:s/ \(}}\) */\r\1\r/g<CR>`n20==
 
 " auto mkview & loadview
 au BufWinLeave * silent mkview
 au BufWinEnter * silent loadview
+
+" hide Preview Window of YCM
+set completeopt-=preview
 
 " indent set tab = 2 blank space
 set ts=2
