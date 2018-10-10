@@ -128,8 +128,10 @@ PROMPT_COMMAND='echo -en "\033]0; $(whoami)@$(hostname)|$( pwd|cut -d "/" -f 4-1
 
 
 ## auto ssh-add Private key
-# if [ -z "$SSH_AUTH_SOCK" ] ; then
-#   eval `ssh-agent -s`
-#   ssh-add
-#   ssh-add ~/.ssh/WisnucCDCI
-# fi
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval `ssh-agent -s`
+  ssh-add
+  ssh-add ~/.ssh/WisnucCDCI
+fi
+
+# source /usr/share/autojump/autojump.sh

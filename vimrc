@@ -51,8 +51,8 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 nnoremap <F9> mn:s/\([,\{rv]\)[ ]/\1\r/g<CR>:s/ \(}}\) */\r\1\r/g<CR>`n20==
 
 " auto mkview & loadview
-au BufWinLeave * silent mkview
-au BufWinEnter * silent loadview
+ au BufWinLeave * silent mkview
+ au BufWinEnter * silent loadview
 
 " hide Preview Window of YCM
 set completeopt-=preview
@@ -67,4 +67,4 @@ set number
 " colors
 set t_Co=256
 " colorscheme evening
-" set background=light
+" set background=dark
