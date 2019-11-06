@@ -1,10 +1,17 @@
 [user]
-	name = juncaixinchi
-	email = juncaixinchi111@gmail.com
+  name = juncaixinchi
+  email = juncaixinchi111@gmail.com
+
 [alias]
-	st = status
+  st = status
   dl = diff HEAD^ HEAD
-  logl = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(bold yellow)%d%C(reset) %s%C(reset) %C(dim white) - %an%C(reset)' -18
-  logla = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(bold yellow)%d%C(reset) %s%C(reset) %C(dim white) - %an%C(reset)' --all
+  ck = checkout -- .
+  logl = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ai)%C(bold yellow)%d%C(reset) %s%C(reset) %C(dim white) - %an%C(reset)' -18
+  logla = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ai)%C(bold yellow)%d%C(reset) %s%C(reset) %C(dim white) - %an%C(reset)' --all
 [core]
-	editor = vi
+  editor = vi
+#  gitProxy = socks5://127.0.0.1:2333
+#[http]
+#  proxy = socks5://127.0.0.1:2333
+#[https]
+#  proxy = socks5://127.0.0.1:2333
